@@ -6,6 +6,7 @@ Or you can use KodeKloud playground as well.
 
 Run promethues_setup.sh to setup prometheus
 RUN Pushgateway setup pushgateway_setup.sh
+RUN `pip install prometheus_client` and `pip install schedule`
 
 Configure prometheus to scrape pushgateway
 
