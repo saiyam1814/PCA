@@ -1,6 +1,6 @@
 sudo groupadd --system prometheus
-sudo useradd -s /sbin/nologin --system -g prometheus prometheussudo 
-mkdir /var/lib/prometheus
+sudo useradd -s /sbin/nologin --system -g prometheus prometheus
+sudo mkdir /var/lib/prometheus
 for i in rules rules.d files_sd; do sudo mkdir -p /etc/prometheus/${i}; done
 mkdir -p /tmp/prometheus && cd /tmp/prometheus
 curl -s https://api.github.com/repos/prometheus/prometheus/releases/latest | grep browser_download_url | grep linux-amd64 | cut -d '"' -f 4 | wget -qi -
