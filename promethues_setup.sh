@@ -10,8 +10,7 @@ sudo mv prometheus promtool /usr/local/bin/
 sudo mv prometheus.yml /etc/prometheus/prometheus.yml
 sudo mv consoles/ console_libraries/ /etc/prometheus/
 cd $HOME
-for i in rules rules.d files_sd; do sudo chown -R prometheus:prometheus /etc/prometheus/${i}; done
-for i in rules rules.d files_sd; do sudo chmod -R 775 /etc/prometheus/${i}; done
+
 
 sudo tee /etc/systemd/system/prometheus.service<<EOF
 [Unit]
@@ -40,7 +39,8 @@ Restart=always
 WantedBy=multi-user.target
 EOF
 
-
+for i in rules rules.d files_sd; do sudo chown -R prometheus:prometheus /etc/prometheus/${i}; done
+for i in rules rules.d files_sd; do sudo chmod -R 775 /etc/prometheus/${i}; done
 sudo chown -R prometheus:prometheus /var/lib/prometheus/
 sudo systemctl daemon-reload
 sudo systemctl start prometheus
