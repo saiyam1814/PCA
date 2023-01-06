@@ -1,7 +1,9 @@
 # PCA - Prometheus Certified associate
 
-[Video URL]()
+[Video URL](https://youtu.be/DWq8M3iN_O0)
+
 [Link to KodeKloud course](https://kode.wiki/3YzkrWV)
+
 Or you can use KodeKloud playground as well.
 
 Run promethues_setup.sh to setup prometheus
