@@ -20,7 +20,16 @@ Configure prometheus to scrape pushgateway
     static_configs:
       - targets: ['localhost:9091']
 ```
+### To see Variation in the graph
 
+To see the variation in the graph put load(more usage of RAM, CPU, etc) on the machine. To do so `stress` command is used. 
+```
+// Install stress command
+sudo apt install stress
+
+// Run the below command
+stress -c 2 -i 1 -m 1 --vm-bytes 128M -t 3600s
+```
 <img width="535" alt="Screenshot 2023-01-05 at 5 53 49 PM" src="https://user-images.githubusercontent.com/8190114/210779498-76daedb2-355e-494c-9ac3-fea5423f83f9.png">
 
 
