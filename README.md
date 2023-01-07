@@ -27,7 +27,7 @@ To see the variation in the graph put load(more usage of RAM, CPU, etc) on the m
 // Install stress command
 sudo apt install stress
 
-// Run the below command
+// Run the below command in separate tab
 stress -c 2 -i 1 -m 1 --vm-bytes 128M -t 3600s
 ```
 <img width="535" alt="Screenshot 2023-01-05 at 5 53 49 PM" src="https://user-images.githubusercontent.com/8190114/210779498-76daedb2-355e-494c-9ac3-fea5423f83f9.png">
